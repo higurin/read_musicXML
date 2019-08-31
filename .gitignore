@@ -1,0 +1,5 @@
+# gitで管理しないファイルを記載する
+music/
+
+*.csv
+.DS_Store
