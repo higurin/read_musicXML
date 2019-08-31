@@ -3,6 +3,11 @@
 ## 編集するところ
 - xml_name に、xmlファイルの名前を記載する
 - csv_writerに書き出す時の名前を記載する
+### 特徴量を増やした場合
+- csv_make() [["time","soprano","tempo","dynamics","local_tempo","attraction"]]
+  - 例）0.297030,       53,    101,        89,     1.683333,    0.030000
+
+
 
 
 ## 参考サイト
@@ -11,8 +16,7 @@
 - Beautiful Soup 4.2.0 Doc. 日本語訳 (2013-11-19最終更新) http://kondou.com/BS4/
 
 
-## BeautifulSoup
-
+# 関数の説明 (read_musicXML.py)
 ## extract_music()
 - Extract music data from xml file.
 - この関数はピッチの情報をreturnする.pitch_listには、[cur_time,step,octave,accidental]
@@ -24,9 +28,6 @@
 ## voice_part()
 - パートリストを分ける
 
-
----
-# 特徴量
 
 ## pitch_highest()
 - 渡されたパートの最高音（メロディライン）を抜き出す？
